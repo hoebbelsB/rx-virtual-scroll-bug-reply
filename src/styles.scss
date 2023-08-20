@@ -1,1 +1,242 @@
-/* You can add global styles to this file, and also import other style files */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+button,
+hr,
+input {
+  overflow: visible;
+}
+progress,
+sub,
+sup {
+  vertical-align: baseline;
+}
+[type='checkbox'],
+[type='radio'],
+legend {
+  box-sizing: border-box;
+  padding: 0;
+}
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+details,
+main {
+  display: block;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+a {
+  background-color: transparent;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+b,
+strong {
+  font-weight: bolder;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+img {
+  border-style: none;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+button,
+select {
+  text-transform: none;
+}
+[type='button'],
+[type='reset'],
+[type='submit'],
+button {
+  -webkit-appearance: button;
+}
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner,
+button::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring,
+button:-moz-focusring {
+  outline: ButtonText dotted 1px;
+}
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+legend {
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  white-space: normal;
+}
+textarea {
+  overflow: auto;
+}
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+[type='search'] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+summary {
+  display: list-item;
+}
+[hidden],
+template {
+  display: none;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+
+  outline: none;
+}
+
+$bu: 24px;
+$fontMono: 'Roboto Mono', monospace;
+$_wrapPadding: ($bu * 0.75) 0 ($bu * 0.75) 0;
+$_itemPadding: 0 ($bu * 0.75);
+$_bgColor: #0b0c14;
+$_textColor: #d0d2dc;
+$_dateColor: #505050;
+
+.__wrap {
+  position: relative;
+
+  padding: $_wrapPadding;
+  padding-right: 0;
+  height: 100vh;
+
+  background: $_bgColor;
+  color: $_textColor;
+  border-radius: 4px;
+
+  font-family: $fontMono;
+  font-size: 12px;
+}
+
+.__log-viewport {
+  position: relative;
+  height: 100%;
+}
+
+.__scroller {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.__item {
+  display: block;
+  width: 100%;
+  min-height: 22px;
+  line-height: 22px;
+  padding: $_itemPadding;
+
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-wrap: break-word;
+
+  &:hover {
+    background: lighten($_bgColor, 5%);
+  }
+}
+
+.__timestamp {
+  width: 195px;
+
+  color: $_dateColor;
+
+  font-weight: 500;
+}
+
+.__content {
+  margin-left: 10px;
+
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-wrap: break-word;
+}
+
+.__live-button {
+  position: absolute;
+  z-index: 100;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -50px;
+}
